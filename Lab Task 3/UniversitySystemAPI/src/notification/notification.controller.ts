@@ -3,14 +3,10 @@ import { NotificationService } from './notification.service.js';
 
 @Controller('notification')
 export class NotificationController {
-  constructor(
-    private readonly notificationService: NotificationService,
-  ) {}
+  constructor(private readonly notificationService: NotificationService) {}
 
   @Post('send')
-  sendNotification(
-    @Body() body: { studentName: string; message: string },
-  ) {
+  sendNotification(@Body() body: { studentName: string; message: string }) {
     return this.notificationService.sendNotification(
       body.studentName,
       body.message,

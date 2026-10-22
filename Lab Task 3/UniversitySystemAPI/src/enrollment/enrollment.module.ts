@@ -5,10 +5,7 @@ import { EnrollmentController } from './enrollment.controller.js';
 import { EnrollmentService } from './enrollment.service.js';
 
 @Module({
-  imports: [
-    CourseModule,
-    forwardRef(() => NotificationModule),
-  ],
+  imports: [CourseModule, forwardRef(() => NotificationModule)],
   controllers: [EnrollmentController],
   providers: [EnrollmentService],
   exports: [EnrollmentService],
