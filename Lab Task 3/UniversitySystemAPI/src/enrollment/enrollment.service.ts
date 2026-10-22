@@ -7,7 +7,7 @@ export class EnrollmentService {
   constructor(
     private readonly courseService: CourseService,
     @Inject(forwardRef(() => NotificationService))
-    private readonly notificationService: NotificationService,
+    private readonly notificationService: any,
   ) {}
 
   getEnrollments() {
