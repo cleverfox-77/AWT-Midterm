@@ -1,3 +1,4 @@
+import { Type } from 'class-transformer';
 import {
   IsBoolean,
   IsInt,
@@ -8,9 +9,8 @@ import {
   IsString,
   Min,
 } from 'class-validator';
-import { Type } from 'class-transformer';
 
-export class CreateProductDto {
+export class NewItemDto {
   @IsString()
   @IsNotEmpty()
   name: string;

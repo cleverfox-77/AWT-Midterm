@@ -1,13 +1,12 @@
-import { forwardRef, Module } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { CourseModule } from '../course/course.module.js';
-import { NotificationModule } from '../notification/notification.module.js';
-import { EnrollmentController } from './enrollment.controller.js';
-import { EnrollmentService } from './enrollment.service.js';
+import { EnrollmentEndpoint } from './enrollment.endpoint.js';
+import { EnrollmentDesk } from './enrollment.desk.js';
 
 @Module({
-  imports: [CourseModule, forwardRef(() => NotificationModule)],
-  controllers: [EnrollmentController],
-  providers: [EnrollmentService],
-  exports: [EnrollmentService],
+  imports: [CourseModule],
+  controllers: [EnrollmentEndpoint],
+  providers: [EnrollmentDesk],
+  exports: [EnrollmentDesk],
 })
 export class EnrollmentModule {}

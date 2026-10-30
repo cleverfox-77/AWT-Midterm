@@ -8,7 +8,7 @@ import {
   Min,
 } from 'class-validator';
 
-export class CreateCourseDto {
+export class NewCourseDto {
   @IsString()
   @IsNotEmpty()
   name: string;

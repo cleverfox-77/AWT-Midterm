@@ -1,13 +1,13 @@
 import {
-  Entity,
-  PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
-@Entity()
-export class Products {
+@Entity('products')
+export class InventoryItem {
   @PrimaryGeneratedColumn()
   id: number;
 
